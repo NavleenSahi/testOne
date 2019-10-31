@@ -18,6 +18,7 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     // 1. Outlet for the image view
     @IBOutlet var pokemonImageView: WKInterfaceImage!
     
+    
     // 2. Outlet for the label
     @IBOutlet var nameLabel: WKInterfaceLabel!
     

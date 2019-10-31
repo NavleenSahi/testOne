@@ -106,6 +106,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     
+    
     // MARK: Functions for Pokemon Parenting
     @IBAction func nameButtonPressed() {
         print("name button pressed")
