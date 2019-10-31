@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Helvetica.ttc">
-            <string>Helvetica-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -33,10 +26,10 @@
                                 </label>
                             </items>
                         </group>
-                        <imageView width="47" height="47" alignment="center" image="pokeball" id="RxI-YZ-AgM"/>
                         <label alignment="center" text="Albert is hungry" id="QdJ-Fj-LrR">
                             <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                         </label>
+                        <imageView width="47" height="47" alignment="center" image="pokeball" id="RxI-YZ-AgM"/>
                         <group width="1" alignment="left" id="zVJ-eg-oyl">
                             <items>
                                 <button alignment="center" title="N" id="sSF-lA-oJl">
@@ -65,6 +58,7 @@
                                     <fontDescription key="font" type="system" pointSize="13"/>
                                     <connections>
                                         <action selector="hibernateButtonPressed" destination="AgC-eL-Hgc" id="lo9-VG-AtJ"/>
+                                        <segue destination="TKJ-vR-82D" kind="push" id="fbY-TQ-fEH"/>
                                     </connections>
                                 </button>
                             </items>
@@ -88,15 +82,15 @@
             <objects>
                 <controller id="TKJ-vR-82D" customClass="Screen2Sample" customModule="CommunicationTest_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Give me a name" id="aem-N8-vQs">
+                        <button width="1" alignment="left" title="Give me a Name" id="aem-N8-vQs">
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="selectNameButtonPressed" destination="TKJ-vR-82D" id="PWX-4J-nLv"/>
                             </connections>
                         </button>
                         <imageView alignment="center" id="YVj-81-CS0"/>
-                        <label alignment="left" text="Label" id="hsS-ha-cvx"/>
-                        <button width="1" alignment="left" title="Start" id="pBg-zB-rVo">
+                        <label alignment="left" text="Fateh" id="hsS-ha-cvx"/>
+                        <button width="1" alignment="left" title="Feed" id="pBg-zB-rVo">
                             <color key="titleColor" red="0.31372549020000001" green="0.27450980390000002" blue="0.34509803919999998" alpha="1" colorSpace="deviceRGB"/>
                             <color key="backgroundColor" red="1" green="0.9385274106" blue="0.23414020229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -110,7 +104,10 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="562" y="382"/>
+            <point key="canvasLocation" x="865" y="31"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pokeball" width="64" height="64"/>
+    </resources>
 </document>

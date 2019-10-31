@@ -51,10 +51,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.awake(withContext: context)
         
         
-        // 1. Check if teh watch supports sessions
+        // 1. Check if the watch supports sessions
         if WCSession.isSupported() {
+            print("PHONE: Phone supports watchconnectivity!")
             WCSession.default.delegate = self
             WCSession.default.activate()
+        }
+        else {
+            print ("PHONE: Phone does not support watchconnectivity!")
         }
         
         
@@ -78,19 +82,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     // 2. When person presses button on watch, send a message to the phone
     @IBAction func buttonPressed() {
+        print ("button Pressed!")
         
         if WCSession.default.isReachable {
             print("Attempting to send message to phone")
             self.messageLabel.setText("Sending msg to watch")
             WCSession.default.sendMessage(
-                ["name" : "Pritesh"],
+                ["name" : "Fateh"],
                 replyHandler: {
                     (_ replyMessage: [String: Any]) in
-                    // @TODO: Put some stuff in here to handle any responses from the PHONE
+                    
                     print("Message sent, put something here if u are expecting a reply from the phone")
                     self.messageLabel.setText("Got reply from phone")
             }, errorHandler: { (error) in
-                //@TODO: What do if you get an error
                 print("Error while sending message: \(error)")
                 self.messageLabel.setText("Error sending message")
             })
