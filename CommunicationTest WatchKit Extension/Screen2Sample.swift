@@ -64,7 +64,7 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
                    print("Trying to feed the baby")
             self.nameLabel.setText("baby is hungry")
             WCSession.default.sendMessage(
-                ["Fateh" : "no more hungry"],
+                ["Fateh" : "wakeUp"],
                 replyHandler: {
                     (_ replyMessage: [String: Any]) in
                     
@@ -80,7 +80,7 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     @IBAction func selectNameButtonPressed() {
         print("select name button pressed")
         if WCSession.default.isReachable {
-         print("Fateh is hungry")
+         print("Fateh is awake")
         }
         
     }
