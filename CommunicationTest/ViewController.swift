@@ -108,7 +108,7 @@ class ViewController: UIViewController, WCSessionDelegate  {
     }
     
     // MARK: Choose a Pokemon actions
-    
+    // ---- 
     @IBAction func pokemonButtonPressed(_ sender: Any) {
         print("You pressed the pokemon button")
         print("Meassage == \(outputLabel!.text ?? "No Value")")
