@@ -60,11 +60,30 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     // MARK: Actions
     @IBAction func startButtonPressed() {
         print("Start button pressed")
+        if WCSession.default.isReachable {
+                   print("Trying to feed the baby")
+            self.nameLabel.setText("baby is hungry")
+            WCSession.default.sendMessage(
+                ["Fateh" : "no more hungry"],
+                replyHandler: {
+                    (_ replyMessage: [String: Any]) in
+                    
+                    print("Message sent, put something here if u are expecting a reply from the phone")
+                    self.nameLabel.setText("Got reply from phone")
+            }, errorHandler: { (error) in
+                print("Error while sending message: \(error)")
+                self.nameLabel.setText("Error sending message")
+            })
+    }
     }
     
     
     @IBAction func selectNameButtonPressed() {
         print("select name button pressed")
+        if WCSession.default.isReachable {
+         print("Fateh is hungry")
+        }
+        
     }
     
 
