@@ -61,14 +61,14 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     @IBAction func startButtonPressed() {
         print("Start button pressed")
         if WCSession.default.isReachable {
-                   print("Trying to feed the baby")
-            self.nameLabel.setText("baby is hungry")
+                   print("Trying to hibernate the baby")
+            self.nameLabel.setText("baby is hibernated")
             WCSession.default.sendMessage(
-                ["Fateh" : "wakeUp"],
+                ["Baby" : "hibernate"],
                 replyHandler: {
                     (_ replyMessage: [String: Any]) in
                     
-                    print("Message sent, put something here if u are expecting a reply from the phone")
+                    print("Message sent, Baby is in hibernation mode")
                     self.nameLabel.setText("Got reply from phone")
             }, errorHandler: { (error) in
                 print("Error while sending message: \(error)")
@@ -80,7 +80,7 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     @IBAction func selectNameButtonPressed() {
         print("select name button pressed")
         if WCSession.default.isReachable {
-         print("Fateh is awake")
+         print("Baby is hibernating")
         }
         
     }
