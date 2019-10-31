@@ -77,7 +77,6 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     }
     }
     
-    
     @IBAction func selectNameButtonPressed() {
         print("select name button pressed")
         if WCSession.default.isReachable {
