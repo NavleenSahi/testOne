@@ -53,8 +53,6 @@ class ViewController: UIViewController, WCSessionDelegate  {
             self.outputLabel.insertText("\nMessage Received: \(message)")
         }
         
-        // 2. Also, print a debug message to the phone console
-        // To make the debug message appear, see Moodle instructions
         print("Received a message from the watch: \(message)")
     }
 
