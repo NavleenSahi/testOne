@@ -20,6 +20,7 @@
 		05E95235236494EA00AA7287 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E95234236494EA00AA7287 /* InterfaceController.swift */; };
 		05E95237236494EA00AA7287 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E95236236494EA00AA7287 /* ExtensionDelegate.swift */; };
 		05E95239236494EA00AA7287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E95238236494EA00AA7287 /* Assets.xcassets */; };
+		87D0B076236B4C780024967E /* wakeUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0B075236B4C780024967E /* wakeUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		05E95236236494EA00AA7287 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		05E95238236494EA00AA7287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05E9523A236494EA00AA7287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87D0B075236B4C780024967E /* wakeUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wakeUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				05E95238236494EA00AA7287 /* Assets.xcassets */,
 				05E9523A236494EA00AA7287 /* Info.plist */,
 				05987CEF236B0DFB0039757C /* Screen2Sample.swift */,
+				87D0B075236B4C780024967E /* wakeUp.swift */,
 			);
 			path = "CommunicationTest WatchKit Extension";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D0B076236B4C780024967E /* wakeUp.swift in Sources */,
 				05987CF0236B0DFB0039757C /* Screen2Sample.swift in Sources */,
 				05E95237236494EA00AA7287 /* ExtensionDelegate.swift in Sources */,
 				05E95235236494EA00AA7287 /* InterfaceController.swift in Sources */,
