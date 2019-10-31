@@ -94,7 +94,7 @@ class ViewController: UIViewController, WCSessionDelegate  {
         
         // 1. Try to send a message to the phone
         if (WCSession.default.isReachable) {
-            let message = ["course": "MADT"]
+            let message = ["choose": "Pokemon"]
             WCSession.default.sendMessage(message, replyHandler: nil)
             // output a debug message to the UI
             outputLabel.insertText("\nMessage sent to watch")
@@ -115,8 +115,7 @@ class ViewController: UIViewController, WCSessionDelegate  {
         print("Meassage == \(outputLabel!.text ?? "No Value")")
         
         if(outputLabel!.text != nil){
-            if (WCSession.default.isReachable) {
-              
+            if (WCSession.default.isReachable) {              
                 let message:[String : Any] = ["message" : outputLabel.text!]
                 WCSession.default.sendMessage(message
                     ,replyHandler: {replyMessage in

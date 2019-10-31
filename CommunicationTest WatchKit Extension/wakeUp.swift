@@ -15,11 +15,13 @@ class wakeUp: WKInterfaceController, WCSessionDelegate {
     
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        <#code#>
+        
     }
     
         override func awake(withContext context: Any?) {
            super.awake(withContext: context)
+            
+            print("Baby is not sleeping now!")
            
            
            // 1. Check if the watch supports sessions
@@ -42,6 +44,12 @@ class wakeUp: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
-    
+    @IBAction func wakeUpButtonPressed() {
+        print("wake up baby")
+        
+        if WCSession.default.isReachable {
+            print("baby is awake")
+        }
+    }
     
 }
