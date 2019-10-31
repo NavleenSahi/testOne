@@ -107,7 +107,6 @@ class ViewController: UIViewController, WCSessionDelegate  {
         }
     }
     
-    
     // MARK: Choose a Pokemon actions
     
     @IBAction func pokemonButtonPressed(_ sender: Any) {
